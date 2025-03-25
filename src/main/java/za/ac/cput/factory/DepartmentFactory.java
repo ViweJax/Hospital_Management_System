@@ -11,7 +11,7 @@ import za.ac.cput.domain.Department;
 
 public class DepartmentFactory {
 
-    public static Department createDepartment(Integer departmentIdentity, String departmentName, String headDoctor, Integer staffCount, String departmentPhoneNumber, String location) {
+    public static Department createDepartment(String departmentIdentity, String departmentName, String headDoctor, Integer staffCount, String departmentPhoneNumber, String location) {
 
     // If any field is left empty, return null
         if (departmentIdentity == null || departmentName == null || headDoctor == null || staffCount == null || departmentPhoneNumber == null || location == null) {
@@ -19,8 +19,8 @@ public class DepartmentFactory {
         }
 
     // Validation checks: Throw an error for invalid values
-        if (departmentIdentity <= 0) {
-            throw new IllegalArgumentException("Dapartment ID must be greater than or qual to 0");
+        if (departmentIdentity.isEmpty()) {
+            throw new IllegalArgumentException("Dapartment ID cannot be empty.");
         }
         if (departmentName.isEmpty()) {
             throw new IllegalArgumentException("Head doctor name cannot be empty.");

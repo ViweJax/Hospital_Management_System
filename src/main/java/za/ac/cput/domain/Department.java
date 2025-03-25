@@ -10,7 +10,7 @@ Date: 18 March 2025
 import java.util.ArrayList;
 
 public class Department {
-    private int departmentIdentity;
+    private String departmentIdentity;
     private String departmentName;
     private String headDoctor;
     private int staffCount;
@@ -29,7 +29,7 @@ public class Department {
         //this.appointments = builder.appointments;
     }
 
-    public int getDepartmentIdentity() {
+    public String getDepartmentIdentity() {
         return departmentIdentity;
     }
 
@@ -73,7 +73,7 @@ public class Department {
     }
 
     public static class Builder {
-        private int departmentIdentity;
+        private String departmentIdentity;
         private String departmentName;
         private String headDoctor;
         private int staffCount;
@@ -81,7 +81,7 @@ public class Department {
         private String location;
         //private List<Appointments> appointments;
 
-        public Builder setDepartmentIdentity(int departmentIdentity) {
+        public Builder setDepartmentIdentity(String departmentIdentity) {
             this.departmentIdentity = departmentIdentity;
             return this;
         }
