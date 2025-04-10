@@ -22,6 +22,7 @@ public class Doctor {
 
     }
     public Doctor(Builder builder) {
+        this.doctorID = builder.doctorID;
         this.firstName = builder.firstName;
         this.lastName = builder.lastName;
         this.specialization = builder.specialization;

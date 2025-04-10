@@ -54,6 +54,7 @@ public class DoctorFactory {
                 .setLastName(lastName)
                 .setSpecialization(specialization)
                 .setHospitalAffiliation(hospitalAffiliation)
+                .setEmail(email)
                 .setGender(gender)
                 .setAvailability(availability)
                 .setLicenceNumber(licenceNumber)
